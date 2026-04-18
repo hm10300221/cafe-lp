@@ -1,0 +1,418 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Serif JP', serif;
+  color: #3a2a2a;
+  background-color: #fdf6f4;
+}
+
+/* ナビゲーション */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: rgba(253, 246, 244, 0.95);
+  border-bottom: 1px solid #e8cfc8;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo-img {
+  height: 50px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #3a2a2a;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #b07870;
+}
+
+.nav-cta {
+  background-color: #b07870;
+  color: #ffffff !important;
+  padding: 10px 24px;
+  border-radius: 30px;
+  transition: background-color 0.3s !important;
+}
+
+.nav-cta:hover {
+  background-color: #96625a !important;
+}
+
+/* ヒーロー */
+.hero {
+  min-height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 100px 20px 60px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(80, 40, 38, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-sub {
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  color: #f2d5ce;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  line-height: 1.4;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: #edddd8;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.hero-btn {
+  display: inline-block;
+  background-color: #b07870;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 16px 48px;
+  border-radius: 40px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: #96625a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(176, 120, 112, 0.4);
+}
+
+/* 共通セクション */
+.section-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.section-label {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  color: #b07870;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #3a2a2a;
+  margin-bottom: 60px;
+}
+
+/* About */
+.about {
+  background-color: #ffffff;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  text-align: left;
+}
+
+.about-img-wrap img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 2;
+  color: #7a5a5a;
+  margin-bottom: 20px;
+}
+
+.about-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.about-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: #3a2a2a;
+}
+
+.about-feature i {
+  color: #b07870;
+  font-size: 1.1rem;
+  width: 20px;
+}
+
+/* Menu */
+.menu {
+  background-color: #fdf6f4;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.menu-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e8cfc8;
+  transition: transform 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+}
+
+.menu-img-wrap img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.menu-info h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: #3a2a2a;
+}
+
+.menu-info p {
+  font-size: 0.85rem;
+  color: #7a5a5a;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.menu-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #b07870;
+  font-weight: bold;
+}
+
+/* ギャラリー */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.4s;
+  display: block;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* Access */
+.access {
+  background-color: #ffffff;
+}
+
+.access-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  text-align: left;
+}
+
+.access-detail {
+  background-color: #fdf6f4;
+  border-radius: 16px;
+  padding: 40px;
+  border: 1px solid #e8cfc8;
+}
+
+.access-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.access-row:last-child {
+  margin-bottom: 0;
+}
+
+.access-row i {
+  color: #b07870;
+  font-size: 1.1rem;
+  width: 20px;
+}
+
+.access-row p {
+  font-size: 1rem;
+  color: #3a2a2a;
+  line-height: 1.6;
+}
+
+.map-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e8cfc8;
+}
+
+/* 予約フォーム */
+.reservation {
+  background-color: #fdf6f4;
+}
+
+.form-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.95rem;
+  color: #3a2a2a;
+  margin-bottom: 8px;
+}
+
+.required {
+  background-color: #b07870;
+  color: #ffffff;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e8cfc8;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Noto Serif JP', serif;
+  color: #3a2a2a;
+  background-color: #ffffff;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #b07870;
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  background-color: #b07870;
+  color: #ffffff;
+  border: none;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-family: 'Noto Serif JP', serif;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #96625a;
+  transform: translateY(-2px);
+}
+
+.form-note {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.95rem;
+  color: #b07870;
+  min-height: 24px;
+}
+
+/* フッター */
+.footer {
+  background-color: #3a2a2a;
+  color: #c0a09a;
+  text-align: center;
+  padding: 30px;
+  font-size: 0.85rem;
+}
